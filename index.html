@@ -15,13 +15,13 @@
     />
   </head>
   <body>
-    <header class="header-container">
-      <div class="logo">
+    <header>
+      <div id="logo">
         <a href="/">
           <img src="assets/images/Logo.png" alt="Ahoy!" />
         </a>
       </div>
-      <nav class="nav-list">
+      <nav>
         <ul>
           <li>
             <a href="#about">About</a>
@@ -37,8 +37,8 @@
     </header>
 
     <main>
-      <div id="content">
-        <div id="content-description">
+      <div id="menu-wrapper">
+        <div id="menu">
           <div id="about">
             <h1>What is it about&#63;</h1>
             <p>
@@ -58,12 +58,12 @@
           </div>
           <div id="showcase">
             <h1>See our demonstration</h1>
-            <div id="tab-container">
+            <div>
               <button id="image-tab">Image</button>
               <button id="video-tab">Video</button>
             </div>
 
-            <div id="image-content" class="content">
+            <div class="showcase-content" id="image-content">
               <ul>
                 <li>
                   <img
@@ -83,8 +83,7 @@
               </ul>
             </div>
           </div>
-
-          <div id="video-content" class="content">
+          <div class="showcase-content" id="video-content">
             <ul>
               <iframe
                 src="https://drive.google.com/file/d/1_fF9xfe7xg-R-IlxN0erQL-pmH18ZAAp/preview"
@@ -98,7 +97,7 @@
           <div id="developers">
             <h1>Meet the team</h1>
             <p>Developed by Team 3 from Afternoon Shift for Mini Challenge 3</p>
-            <div class="flex" id="developers-team">
+            <div id="developers-team">
               <div class="card" id="team-profile">
                 <img
                   src="assets/images/Audrey Ayu Kirana.png"
@@ -129,29 +128,32 @@
         <div class="card">
           <h2>TestFlight</h2>
           <p>Scan the QR code or click the button below to try the game</p>
-          <br />
-          <img src="assets/images/TestFlight.png" alt="Ahoy!" />
-          <br />
-          <a href="https://testflight.apple.com/join/Cn0SL9Rw">
-            <button>Play Ahoy&#33; now</button>
-          </a>
+          <div id="testflight">
+            <img src="assets/images/TestFlight.png" alt="Ahoy!" />
+            <a href="https://testflight.apple.com/join/Cn0SL9Rw">
+              <button>Play Ahoy&#33; now</button>
+            </a>
+          </div>
           <hr />
           <ul class="additional-information-unordered-list">
             Platform
+            <br />
+            <li class="additional-information-list">iOS</li>
           </ul>
-          <li class="additional-information-list">iOS</li>
           <ul class="additional-information-unordered-list">
             Categories
+            <br />
+            <li class="additional-information-list">Games</li>
+            <li class="additional-information-list">Entertainment</li>
           </ul>
-          <li class="additional-information-list">Games</li>
-          <li class="additional-information-list">Entertainment</li>
           <ul class="additional-information-unordered-list">
             Technologies
+            <br />
+            <li class="additional-information-list">ARKit</li>
+            <li class="additional-information-list">RealityKit</li>
+            <li class="additional-information-list">Multipeer Connectivity</li>
+            <li class="additional-information-list">SwiftUI</li>
           </ul>
-          <li class="additional-information-list">ARKit</li>
-          <li class="additional-information-list">RealityKit</li>
-          <li class="additional-information-list">Multipeer Connectivity</li>
-          <li class="additional-information-list">SwiftUI</li>
         </div>
       </aside>
     </main>

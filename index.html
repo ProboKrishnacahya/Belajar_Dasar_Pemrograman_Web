@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="navbar-container">
       <div class="logo">
         <a href="/">
           <img src="assets/images/Logo.png" alt="Ahoy!" />
@@ -31,32 +31,92 @@
     </header>
 
     <main>
-      <h2>What is it about?</h2>
-      <p>
-        Ahoy! presents a groundbreaking iOS game application that hand coded and
-        designed for Board Game enthusiasts. This inventive application takes
-        the classic 'Guess Who?' board game to the next level by embracing AR
-        (Augmented Reality) technology. With Ahoy!, players dive into an
-        imaginative realm where the boundaries between the physical and virtual
-        worlds blur. This app brings to life the timeless charm of 'Guess Who?'
-        by allowing both players to interact with virtual characters seamlessly
-        integrated into their real environment. This dynamic fusion of tradition
-        and innovation elevates the excitement and engagement of gameplay,
-        propelling 'Guess Who?' into the digital era with a touch of nostalgia.
-      </p>
-    </main>
-    <aside>
-      <h2>TestFlight</h2>
-      <p>Scan the QR code or click the button below to try the game</p>
-      <img src="assets/images/TestFlight.png" alt="Ahoy!" />
-      <br />
-      <a href="https://testflight.apple.com/join/Cn0SL9Rw">
-        <button>Play Ahoy! now</button>
-      </a>
-    </aside>
+      <div id="content">
+        <div id="content-description">
+          <div id="about">
+            <h1>What is it about?</h1>
+            <p>
+              Ahoy! presents a groundbreaking iOS game application that hand
+              coded and designed for Board Game enthusiasts. This inventive
+              application takes the classic 'Guess Who?' board game to the next
+              level by embracing AR (Augmented Reality) technology. With Ahoy!,
+              players dive into an imaginative realm where the boundaries
+              between the physical and virtual worlds blur. This app brings to
+              life the timeless charm of 'Guess Who?' by allowing both players
+              to interact with virtual characters seamlessly integrated into
+              their real environment. This dynamic fusion of tradition and
+              innovation elevates the excitement and engagement of gameplay,
+              propelling 'Guess Who?' into the digital era with a touch of
+              nostalgia.
+            </p>
+          </div>
+          <div id="showcase">
+            <h1>See our demonstration</h1>
+            <div class="flex" id="showcase-images">
+              <img
+                src="assets/images/Join:Create Room.png"
+                alt="Join/Create Room"
+              />
+              <img src="assets/images/Waiting Room.png" alt="Waiting Room" />
+              <img src="assets/images/Gameplay.png" alt="Gameplay" />
+            </div>
+            <iframe
+              src="https://drive.google.com/file/d/1_fF9xfe7xg-R-IlxN0erQL-pmH18ZAAp/preview"
+              frameborder="0"
+              allowfullscreen="true"
+              title="Video"
+            ></iframe>
+          </div>
+          <div id="developers">
+            <h1>Meet the team</h1>
+            <div class="flex" id="developers-team">
+              <div class="card" id="team-profile">
+                <img
+                  src="assets/images/Audrey Ayu Kirana.png"
+                  alt="Audrey Ayu Kirana"
+                />
+                <strong>Audrey Ayu Kirana</strong>
+                <small>UI/UX Designer</small>
+              </div>
+              <div class="card" id="team-profile">
+                <img src="assets/images/Yohan Wijaya.png" alt="Yohan Wijaya" />
+                <strong>Yohan Wijaya</strong>
+                <small>iOS Developer, Project Manager</small>
+              </div>
+              <div class="card" id="team-profile">
+                <img
+                  src="assets/images/Probo Krishnacahya.png"
+                  alt="Probo Krishnacahya"
+                />
+                <strong>Probo Krishnacahya</strong>
+                <small>UI/UX Designer, iOS Developer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <footer class="footer">
-      <h2>Ahoy! | Apple Developer Academy @ UC 2023</h2>
+      <aside>
+        <div class="card">
+          <h2>TestFlight</h2>
+          <p>Scan the QR code or click the button below to try the game</p>
+          <br />
+          <img src="assets/images/TestFlight.png" alt="Ahoy!" />
+          <br />
+          <a href="https://testflight.apple.com/join/Cn0SL9Rw">
+            <button>Play Ahoy! now</button>
+          </a>
+          <hr />
+          <small
+            >Developed by Team 3 from Afternoon Shift for Mini Challenge
+            3</small
+          >
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <h4>Ahoy! | Apple Developer Academy @ UC 2023</h4>
     </footer>
   </body>
 </html>

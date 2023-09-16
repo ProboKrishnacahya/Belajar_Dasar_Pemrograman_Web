@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+:root {
+  --blue: #9bcfe7;
+  --orange: #ff9500;
+  --beige: #f9e0a3;
+  --gray: #cecece;
+  --white: #ffffff;
+  --black: #000000;
+}
+
 *,
 *::before,
 *::after {
@@ -7,103 +16,160 @@
   font-family: "Inter", sans-serif;
 }
 
-:root {
-  --blue: #9bcfe7;
-  --orange: #ff9500;
-  --beige: #f9e0a3;
+::selection {
+  background-color: var(--beige);
+  color: var(--black);
+}
+
+::-webkit-scrollbar {
+  height: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.6rem;
+  border: solid 0.3rem var(--white);
+  background-color: var(--orange);
 }
 
 body {
-  display: flex;
-  flex-wrap: wrap;
+  height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth !important;
 }
 
-header {
+a {
+  text-decoration: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+header.navbar-container {
   width: 100%;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: var(--blue);
 }
 
-/* Style the top navigation bar */
-.nav-list {
-  display: flex;
+header.navbar-container .logo img {
+  width: 150px;
 }
 
-/* Style the navigation bar links */
-.nav-list a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-/* Change color on hover */
-.nav-list a:hover {
-  border-radius: 2rem;
-  background-color: var(--orange);
-  color: black;
-}
-
-.nav-list ul {
+header.navbar-container .nav-list ul {
+  padding-left: 0;
   display: flex;
   justify-content: center;
+  gap: 2rem 1rem;
 }
 
-.nav-list li {
+header.navbar-container .nav-list li {
   list-style-type: none;
 }
 
-.nav-list li a {
+header.navbar-container .nav-list li a {
   text-decoration: none;
   font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
   padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-aside {
-  flex: 30%;
-  height: 100vh;
-  background-color: #f1f1f1;
-  padding: 20px;
+header.navbar-container .nav-list li:hover a {
+  border-radius: unset;
+  border-bottom: 2px solid var(--orange);
 }
 
-/* Main column */
-.main {
-  flex: 70%;
-  height: 100vh;
-  background-color: white;
-  padding: 20px;
+/* header.navbar-container .nav-list li:hover :active {
+  background-color: var(--orange);
+} */
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* Footer */
-.footer {
+#content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+#content-description {
+  flex: 1 1;
+}
+
+button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--orange);
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.card {
+  padding: 0 1.4rem 1.4rem 1.4rem;
+  border-radius: 1rem;
+  border: 2px solid var(--gray);
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0.5rem;
+}
+
+footer {
   padding: 0.5rem;
   text-align: center;
   background: var(--beige);
 }
 
-button {
-  border: none;
-  border-radius: 4rem;
-  padding: 1rem;
-  background-color: var(--orange);
-  color: white;
+.flex {
+  display: flex;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row,
-  .nav-list {
-    flex-direction: column;
-  }
+#showcase-images img {
+  width: 30%;
+}
 
-  .main, aside {
-    flex: 100% !important;
-  }
+#developers-team {
+  gap: 1rem;
+}
+
+#team-profile {
+  display: grid;
+  gap: 0.5rem;
 }

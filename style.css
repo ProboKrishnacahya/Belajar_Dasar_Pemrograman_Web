@@ -4,6 +4,7 @@
   --blue: #9bcfe7;
   --orange: #ff9500;
   --beige: #f9e0a3;
+  --navy: #3854a5;
   --gray: #cecece;
   --white: #ffffff;
   --black: #000000;
@@ -54,9 +55,16 @@ a {
 
 img {
   max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-header.navbar-container {
+hr {
+  margin: 1rem 0;
+  border: 0.5px solid var(--gray);
+}
+
+.header-container {
   width: 100%;
   margin-inline: auto;
   display: flex;
@@ -66,39 +74,36 @@ header.navbar-container {
   background-color: var(--blue);
 }
 
-header.navbar-container .logo img {
+.logo {
   width: 150px;
 }
 
-header.navbar-container .nav-list ul {
+ul {
   padding-left: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem 1rem;
 }
 
-header.navbar-container .nav-list li {
+li {
   list-style-type: none;
 }
 
-header.navbar-container .nav-list li a {
-  text-decoration: none;
-  font-size: 1.05rem;
-  font-weight: 500;
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav-list a {
+  padding-bottom: 0.5rem;
+  font-weight: 700;
   color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
 
-header.navbar-container .nav-list li:hover a {
+.nav-list a:hover {
   border-radius: unset;
   border-bottom: 2px solid var(--orange);
+  color: var(--orange);
 }
-
-/* header.navbar-container .nav-list li:hover :active {
-  background-color: var(--orange);
-} */
 
 main {
   max-width: 1200px;
@@ -172,4 +177,25 @@ footer {
 #team-profile {
   display: grid;
   gap: 0.5rem;
+}
+
+.additional-information-list {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.additional-information-unordered-list {
+  padding-left: 0px;
+}
+
+.content {
+  display: none;
+}
+
+#image-content ul {
+  display: flex;
+  gap: 1rem;
 }
